@@ -1,0 +1,55 @@
+ejercicio:
+
+Sistema de registro de asignatura:
+
+En una institución se desea desarrollar un sistema de registro académico, que permita relacionar alumno-docente-asignatura.
+Este sistema de almacenamiento de información relevante de cada identidad, calcular automáticamente el promedio de las calificaciones 
+
+Requerimientos:
+-Alumnos: (atributos) run, nombre, edad y fecha de nacimiento.
+métodos: getters y tostring (para información de alumnos
+-Docente: run, id docente, nombre, fecha de ingreso y sede.
+métodos: (atributos) run, nombre, edad y fecha de nacimiento.
+-Asignatura: (atributos) código, nombre asignatura, alumno, docente, nota1, nota2, nota3.
+métodos: calcular nota final(debe promediar las 3 calificaciones.)
+métodos: tostring(debe mostrar asignatura, nombre alumno, docente y calificaciones)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+PRIMERA PARTE ALUMNO:
+
+public class Alumno {
+    private String rut;
+    private String nombre; 
+    private int edad;
+    private String fechaNacimiento;
+    
+    //Constructor
+    
+public Alumno (String rut, String nombre, int edad, String fechaNacimiento) {
+    this.rut = rut;
+    this.nombre = nombre;
+    this.edad = edad;
+    this.fechaNacimiento = fechaNacimiento;}
+
+    //Metodos
+
+    public String getrut() {return rut;} //get es un metodo establecido con el que yo acepto informacion
+    public void setrut() {this.rut=rut;}
+    
+   //Nombre
+
+    public String getnombre() {return nombre;}
+    public void setnombre() {this.nombre=nombre;}
+
+    public int getedad() {return edad;}
+    public void setedad() {this.edad=edad;} //void acompaña al get y da salida
+
+    public String getfechaNacimiento() {return fechaNacimiento;}
+    public void setfechaNacimiento() {this.fechaNacimiento=fechaNacimiento;}
+
+    @Override
+    public String toString(){
+        return "Alumno: " + nombre + "rut: " + rut + "edad: " + edad + "fecha nacimiento: " + fechaNacimiento; 
+    }
+    }
+}
